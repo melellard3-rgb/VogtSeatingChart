@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" style="color-scheme: only light;">
-<head>
-<meta charset="UTF-8">
+<!-- saved from url=(0051)file:///Users/melissa/Downloads/vogt-seating_2.html -->
+<html lang="en" style="color-scheme: only light;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mr. & Mrs. Vogt · Seating</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+<title>Mr. &amp; Mrs. Vogt · Seating</title>
+<link href="./index_files/css2" rel="stylesheet">
 <meta name="color-scheme" content="only light">
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -157,10 +157,16 @@
     background: #ffffff;
     border-left: 2px solid #2a2010;
     border-right: 2px solid #2a2010;
-    border-bottom: 1px solid #e0d8be;
+    border-bottom: 1.5px solid #c8bfa0;
   }
   .alpha-section .guest-item:first-of-type {
-    border-top: 1px solid #e0d8be;
+    border-top: 1.5px solid #c8bfa0;
+  }
+  .alpha-section .guest-item:last-child {
+    border-bottom: 2px solid #2a2010;
+  }
+  .alpha-section .guest-item:first-of-type {
+    border-top: 2px solid #2a2010;
   }
   .guest-item.highlight {
     background: #f5f8f2;
@@ -267,7 +273,7 @@
 
   <div class="search-section">
     <div class="search-wrap">
-      <svg class="search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2a2010" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+      <svg class="search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2a2010" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg>
       <input type="text" id="search" placeholder="Search your name..." oninput="onSearch()" autocomplete="off" autocorrect="off" spellcheck="false">
     </div>
     <div class="search-hint">Type your first or last name</div>
@@ -276,8 +282,8 @@
   <div id="search-results"></div>
 
   <div class="view-toggle">
-    <button class="toggle-btn active" id="btn-alpha" onclick="setView('alpha')">A–Z List</button>
-    <button class="toggle-btn" id="btn-table" onclick="setView('table')">By Table</button>
+    <button class="toggle-btn active" id="btn-alpha" onclick="setView(&#39;alpha&#39;)">A–Z List</button>
+    <button class="toggle-btn" id="btn-table" onclick="setView(&#39;table&#39;)">By Table</button>
   </div>
 
   <div id="alpha-view">
@@ -302,34 +308,28 @@
 </div>
 <script>
 const guestsByTable = {
-  A:[{first:"Julie",last:"Ellard"},{first:"Tom",last:"Santamaria"},{first:"Frank",last:"Bellomo"},{first:"Meg",last:"Bellomo"},{first:"Jody",last:"Marcoux"},{first:"Paul",last:"Marcoux"},{first:"Lori",last:"Fonseca"},{first:"Diane",last:"Chaplin"},{first:"Steven",last:"Ellard"},{first:"Christine",last:"Ellard"}],
-  B:[{first:"Sara",last:"Elkerm"},{first:"Kerry",last:"Ellard"},{first:"Danielle",last:"Rico"},{first:"Chris",last:"Taylor"},{first:"Chrissy",last:"Conti"},{first:"Colby",last:"Butler"},{first:"Karen",last:"Costello"},{first:"Shannon",last:"Butler"},{first:"Roger",last:"Noll"}],
-  C:[{first:"Troy",last:"Bigwood"},{first:"Julia",last:"Bigwood"},{first:"Ryan",last:"Stelling"},{first:"Brittany",last:"Stelling"},{first:"Ari",last:"Stelling"},{first:"Ella",last:"Stelling"},{first:"Ashraf",last:"Elkerm"},{first:"Eyman",last:"Elkerm"},{first:"Barbara",last:"Wyman"},{first:"Debra",last:"Bishop"}],
-  D:[{first:"Pej",last:"Ayandeh"},{first:"Jessica",last:"Wolk"},{first:"Hale",last:"Haile"},{first:"Haley",last:"Sullivan"},{first:"Magno",last:"Gil"},{first:"Tim",last:"Gil"},{first:"Nicole",last:"Perez"},{first:"Derek",last:"Pereira"},{first:"Debbie",last:"Kozlowski"},{first:"Stephanie",last:"Grammel"}],
-  E:[{first:"Patty",last:"Federico"},{first:"Anthony",last:"Federico"},{first:"Linda",last:"Ludvigsen"},{first:"Ron",last:"Ludvingsen"},{first:"Rick",last:"Conti"},{first:"Anita",last:"Conti"},{first:"Michelle",last:"Conti"},{first:"Callum",last:""},{first:"Jesse",last:"Wilfert"},{first:"Frances",last:"Sinclair"}],
-  F:[{first:"Ryan",last:"Semple"},{first:"Emily",last:"Semple"},{first:"Ryan",last:"Rogers"},{first:"Jenny",last:"Kohl"},{first:"Stephen",last:"Moreno"},{first:"Lissbeth",last:"Martinez"},{first:"Adrian",last:"Vogt"},{first:"John",last:"Munroe"},{first:"Emma",last:"George"},{first:"Ariel",last:"Reches"}],
-  G:[{first:"Ben",last:"Carroll"},{first:"Zoey",last:"Sloate"},{first:"Phillip",last:"Harrison"},{first:"Kat",last:"Reidl"},{first:"Paul",last:"LaGrandeur"},{first:"Carly",last:"Nangle LaGrandeur"},{first:"Ryan",last:"Jerue"},{first:"Taylor",last:"Jerue"},{first:"Matt",last:"Leppek"},{first:"Melissa",last:"Leppek"}],
-  H:[{first:"Maria",last:"Elena"},{first:"Alberto",last:"Vogt"},{first:"Ricardo",last:"Beras Prats"},{first:"Laura",last:"Vogt"},{first:"Tamara",last:"Beras Puesan"},{first:"Raysa",last:"Beras Puesan"},{first:"Antonio",last:"Puesan"},{first:"Nidia",last:"Ramirez"},{first:"Alejandra",last:"Leon"},{first:"Erwin",last:"Vogt"}],
-  I:[{first:"Jose",last:"Alvares"},{first:"Marisol",last:"Alvares"},{first:"Gianna",last:"Alvares"},{first:"Emerson",last:"Alvares"},{first:"Maria",last:"de Lourdes Gonzalez"},{first:"Joaco",last:"Omar"},{first:"Alexandra",last:"Nazario"},{first:"Maria Luisa",last:"Cedeno"},{first:"Francisco",last:"Ramos"},{first:"Anabelle",last:"Vogt"}],
-  J:[{first:"Gabriel",last:"Nazario"},{first:"Alejandra",last:"Casallas"},{first:"Xavier",last:"Nazario"},{first:"Vanessa",last:"Rodriguez Lopez"},{first:"Erwin",last:"Vogt"},{first:"Andrea",last:"Cabrera"},{first:"Alvaro",last:"Ramos"},{first:"Natalie",last:"Vogt"},{first:"Christian",last:"Rivera"},{first:"Mauricio",last:"Vogt"}],
-  K:[{first:"Manuel",last:"Andreu"},{first:"Estela",last:"Andreu"},{first:"Camila",last:"Andreu"},{first:"Chiara",last:"Vogt"}],
+  1:[{first:"Melissa",last:"Ellard"},{first:"Dan",last:"Vogt"},{first:"Kerry",last:"Ellard"},{first:"Adrian",last:"Vogt"},{first:"Jenny",last:"Kohl"},{first:"Ryan",last:"Rogers"},{first:"Chrissy",last:"Conti"},{first:"Chris",last:"Taylor"}],
+  2:[{first:"Julie",last:"Ellard"},{first:"Frank",last:"Bellomo"},{first:"Meg",last:"Bellomo"},{first:"Jody",last:"Marcoux"},{first:"Paul",last:"Marcoux"},{first:"Frances",last:"Sinclair"},{first:"Patty",last:"Federico"},{first:"Anthony",last:"Federico"},{first:"Linda",last:"Ludvigsen"},{first:"Ron",last:"Ludvingsen"}],
+  3:[{first:"Sara",last:"Elkerm"},{first:"Danielle",last:"Rico"},{first:"Colby",last:"Butler"},{first:"Karen",last:"Costello"},{first:"Shannon",last:"Butler"},{first:"Roger",last:"Noll"}],
+  4:[{first:"Troy",last:"Bigwood"},{first:"Julia",last:"Bigwood"},{first:"Ryan",last:"Stelling"},{first:"Brittany",last:"Stelling"},{first:"Ari",last:"Stelling"},{first:"Ella",last:"Stelling"},{first:"Ashraf",last:"Elkerm"},{first:"Eyman",last:"Elkerm"},{first:"Barbara",last:"Wyman"},{first:"Debra",last:"Bishop"}],
+  5:[{first:"Pej",last:"Ayandeh"},{first:"Jessica",last:"Wolk"},{first:"Hale",last:"Haile"},{first:"Haley",last:"Sullivan"},{first:"Magno",last:"Gil"},{first:"Tim",last:"Gil"},{first:"Nicole",last:"Perez"},{first:"Derek",last:"Pereira"},{first:"Debbie",last:"Kozlowski"},{first:"Stephanie",last:"Grammel"}],
+  6:[{first:"Rick",last:"Conti"},{first:"Anita",last:"Conti"},{first:"Michelle",last:"Conti"},{first:"Keilen",last:"Connelly"},{first:"Jesse",last:"Wilfert"},{first:"Diane",last:"Chaplin"},{first:"Lori",last:"Fonseca"},{first:"Steven",last:"Ellard"},{first:"Christine",last:"Ellard"}],
+  7:[{first:"Ryan",last:"Semple"},{first:"Emily",last:"Semple"},{first:"Stephen",last:"Moreno"},{first:"Lissbeth",last:"Martinez"},{first:"John",last:"Munroe"},{first:"Emma",last:"George"},{first:"Ariel",last:"Reches"}],
+  8:[{first:"Ben",last:"Carroll"},{first:"Zoey",last:"Sloate"},{first:"Phillip",last:"Harrison"},{first:"Kat",last:"Reidl"},{first:"Paul",last:"LaGrandeur"},{first:"Carly",last:"Nangle LaGrandeur"},{first:"Ryan",last:"Jerue"},{first:"Taylor",last:"Jerue"},{first:"Matt",last:"Leppek"},{first:"Melissa",last:"Leppek"}],
+  9:[{first:"Maria",last:"Elena"},{first:"Alberto",last:"Vogt"},{first:"Ricardo",last:"Beras Prats"},{first:"Laura",last:"Vogt"},{first:"Tamara",last:"Beras Puesan"},{first:"Raysa",last:"Beras Puesan"},{first:"Antonio",last:"Puesan"},{first:"Nidia",last:"Ramirez"},{first:"Alejandra",last:"Leon"},{first:"Erwin",last:"Vogt"}],
+  10:[{first:"Jose",last:"Alvares"},{first:"Marisol",last:"Alvares"},{first:"Gianna",last:"Alvares"},{first:"Emerson",last:"Alvares"},{first:"Maria",last:"de Lourdes Gonzalez"},{first:"Joaco",last:"Omar"},{first:"Alexandra",last:"Nazario"},{first:"Maria Luisa",last:"Cedeno"},{first:"Francisco",last:"Ramos"},{first:"Anabelle",last:"Vogt"}],
+  11:[{first:"Gabriel",last:"Nazario"},{first:"Alejandra",last:"Casallas"},{first:"Xavier",last:"Nazario"},{first:"Vanessa",last:"Rodriguez Lopez"},{first:"Erwin",last:"Vogt"},{first:"Andrea",last:"Cabrera"},{first:"Alvaro",last:"Ramos"},{first:"Natalie",last:"Vogt"},{first:"Christian",last:"Rivera"},{first:"Mauricio",last:"Vogt"}],
+  12:[{first:"Manuel",last:"Andreu"},{first:"Estela",last:"Andreu"},{first:"Camila",last:"Andreu"},{first:"Chiara",last:"Vogt"}],
 };
-const tableOrder=['A','B','C','D','E','F','G','H','I','J','K'];
+const tableOrder=[1,2,3,4,5,6,7,8,9,10,11,12];
 const allGuests=[];
 tableOrder.forEach(t=>guestsByTable[t].forEach(g=>allGuests.push({...g,table:t})));
 const sorted=[...allGuests].sort((a,b)=>{
   const la=(a.last||a.first).toLowerCase(),lb=(b.last||b.first).toLowerCase();
   return la.localeCompare(lb)||a.first.toLowerCase().localeCompare(b.first.toLowerCase());
 });
-function setView(v){
-  document.getElementById('btn-alpha').classList.toggle('active',v==='alpha');
-  document.getElementById('btn-table').classList.toggle('active',v==='table');
-  document.getElementById('alpha-view').style.display=v==='alpha'?'':'none';
-  document.getElementById('table-view').style.display=v==='table'?'':'none';
-}
 function renderAlpha(list,hl){
-  const el=document.getElementById('guest-list');
-  if(!list.length){el.innerHTML='<div class="no-results">No guests found</div>';return;}
+  const el=document.getElementById('alpha-list');
   const groups={};
   list.forEach(g=>{const k=(g.last||g.first)[0].toUpperCase();if(!groups[k])groups[k]=[];groups[k].push(g);});
   el.innerHTML=Object.keys(groups).sort().map(letter=>{
@@ -352,8 +352,11 @@ function onSearch(){
   re.innerHTML=m.length?m.map(g=>`<div class="result-card"><div class="result-name">${g.first} ${g.last}</div>${g.table?`<div class="result-table-label">Your table</div><div class="result-table-name">${g.table}</div>`:'<div class="result-tbd">Table assignment coming soon</div>'}</div>`).join(''):'<div class="no-results">No guest found — try a different spelling</div>';
   renderAlpha(sorted,new Set(m.map(g=>g.first+'|'+g.last+'|'+g.table)));
 }
-renderAlpha(sorted,null);
-renderTables();
+document.addEventListener('DOMContentLoaded', function() {
+  renderAlpha(sorted, null);
+  renderTables();
+});
+// v3
 </script>
-</body>
-</html>
+
+</body></html>
