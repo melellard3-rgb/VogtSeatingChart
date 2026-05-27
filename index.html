@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0051)file:///Users/melissa/Downloads/vogt-seating_3.html -->
+<!-- saved from url=(0051)file:///Users/melissa/Downloads/vogt-seating_4.html -->
 <html lang="en" style="color-scheme: only light;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -364,11 +364,17 @@ function onSearch(){
   re.innerHTML=m.length?m.map(g=>`<div class="result-card"><div class="result-name">${g.first} ${g.last}</div>${g.table?`<div class="result-table-label">Your table</div><div class="result-table-name">${g.table}</div>`:'<div class="result-tbd">Table assignment coming soon</div>'}</div>`).join(''):'<div class="no-results">No guest found — try a different spelling</div>';
   renderAlpha(sorted,new Set(m.map(g=>g.first+'|'+g.last+'|'+g.table)));
 }
+function setView(v){
+  document.getElementById('alpha-view').style.display=v==='alpha'?'':' none';
+  document.getElementById('table-view').style.display=v==='table'?'':' none';
+  document.getElementById('btn-alpha').classList.toggle('active',v==='alpha');
+  document.getElementById('btn-table').classList.toggle('active',v==='table');
+}
 document.addEventListener('DOMContentLoaded', function() {
   renderAlpha(sorted, null);
   renderTables();
 });
-// v3
+// v4
 </script>
 
 </body></html>
